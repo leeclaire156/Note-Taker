@@ -1,6 +1,7 @@
 const express = require('express');
 //Used to import path methods like path.join(), see https://nodejs.org/api/path.html for more details
 const path = require('path');
+// const api = require('./routes/index.js'); //To be uncommented for modular routing purposes once API GET method issues have been resolved
 
 const app = express();
 // const PORT = process.env.PORT || 3001
@@ -9,6 +10,7 @@ const PORT = 3001
 // Sets up the Express app to handle data parsing from json file
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+// api.use('api', api); //To be uncommented for modular routing purposes once API GET method issues have been resolved
 
 // Allows access of all contents in public folder without writing routes to each asset
 app.use(express.static('public'));

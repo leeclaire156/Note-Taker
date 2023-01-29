@@ -27,7 +27,7 @@
   
   * `string.prototype.trim()` method supplemental lesson provided by [Mozilla](https://developer.mozilla.org/en-US/):<br></br> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim
   
-  * []():<br></br> link
+  * RESTful APIs in 100 Seconds // Build an API from Scratch with Node.js Express supplemental lesson provided by [Fireship](https://www.youtube.com/@Fireship):<br></br> https://www.youtube.com/watch?v=-MTSQjw5DrM
   
   * []():<br></br> link
   
