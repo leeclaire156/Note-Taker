@@ -1,16 +1,16 @@
 const express = require('express');
 //Used to import path methods like path.join(), see https://nodejs.org/api/path.html for more details
 const path = require('path');
-// const api = require('./routes/index.js'); //To be uncommented for modular routing purposes once API GET method issues have been resolved
+const api = require('./routes/index.js'); //To be uncommented for modular routing purposes once API GET method issues have been resolved
 
 const app = express();
 // const PORT = process.env.PORT || 3001
 const PORT = 3001
 
 // Sets up the Express app to handle data parsing from json file
-app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// api.use('api', api); //To be uncommented for modular routing purposes once API GET method issues have been resolved
+app.use(express.urlencoded({ extended: true }));
+app.use('/api', api); //To be uncommented for modular routing purposes once API GET method issues have been resolved
 
 // Allows access of all contents in public folder without writing routes to each asset
 app.use(express.static('public'));
@@ -31,37 +31,6 @@ app.get('/notes', (req, res) =>
 app.get('*', (req, res) =>
     res.sendFile(path.join(__dirname, '/public/index.html'))
 );
-
-
-// API Routes - need GET /api/notes to read (GET?) db.json file and POST /api/notes to perform functions in public/assets/js/index.js
-
-app.get('/api/notes/', (req, res) => {
-    // TODO: Check data persistence files
-    res.json(notesData);
-
-});
-
-
-// TODO: Create GET route to read the data on one of the notes
-// app.get('/api/notes/:id', (req, res) => {
-//     // TODO: Possibly iterate through the terms ID or title from db.json to check if it matches `req.params.term` aka requestedNote
-//     const noteID = req.params.id;
-
-
-// });
-
-// TODO: Create POST route to show the data from the note selected and display it on Notes HTML page
-// app.post('/api/notes/:id', (req, res) => {
-
-// });
-
-
-// DELETE Route to delete the data from notes - - note that line 47 of index.js has a path called `api/notes/${id}` so we will be using '/api/notes/:id'
-app.delete('/api/notes/:id', (req, res) => {
-    const noteID = req.params.id;
-
-    //Filter out id from existing notes
-});
 
 app.listen(PORT, () =>
     console.log(`Example app listening at http://localhost:${PORT}`)
