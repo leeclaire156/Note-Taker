@@ -29,7 +29,7 @@ let activeNote = {};
 const getNotes = () =>
   fetch('/api/notes', {
     method: 'GET', // Route to reading data with GET method
-    headers: {
+    headers: { //headers contain metadata about the request
       'Content-Type': 'application/json', // Tells us what type of data to expect/how to interpret it
     },
   });
