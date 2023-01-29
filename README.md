@@ -17,15 +17,15 @@
   
 
   ## Credits
-  * []():<br></br> link
+  * []():<br></br> https://nodejs.org/api/path.html
   
-  * []():<br></br> link
+  * window.location.pathname supplemental lesson provided by [W3Schools](https://www.w3schools.com/default.asp):<br></br> https://www.w3schools.com/js/js_window_location.asp#:~:text=window.location.hostname%20returns%20the,()%20loads%20a%20new%20document
   
-  * []():<br></br> link
+  * What Does "(e)" Mean in JavaScript? - Event Handler Object Explained" supplemental lesson provided by [dcode](https://www.youtube.com/@dcode-software):<br></br> https://www.youtube.com/watch?v=_BVkOvpyRI0
   
-  * []():<br></br> link
+  * "The Content-Type Header Explained (with examples) | Web Development Tutorial" supplemental lesson provided by [dcode](https://www.youtube.com/@dcode-software):<br></br> https://www.youtube.com/watch?v=rh8Kgsex-Us
   
-  * []():<br></br> link
+  * `string.prototype.trim()` method supplemental lesson provided by [Mozilla](https://developer.mozilla.org/en-US/):<br></br> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim
   
   * []():<br></br> link
   
