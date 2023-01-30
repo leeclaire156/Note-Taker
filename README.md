@@ -11,10 +11,15 @@
 
   ## Usage
   
-  * Please click on the following link of the deployed website, https://leeclaire156.github.io/Note-Taker/
+  * Please click on the following link of the deployed website, https://note-taker-lee-claire-156.herokuapp.com/
 
-  * To use this application, 
-  
+  * To use this application, add a title to the note and the note's contents. Then, click on the save floppy disk icon in the upper right-hand corner, which will only appear once the note's title and text contents are filled out.
+
+  * To create a new note, click on the plus sign on the upper right-hand corner.
+
+  * To view an old note, click on its title from the list of notes on the left side of the page.
+
+  * To delete a note, click on the red trash can to the right of the note's title.  
 
   ## Credits
   * `path()` function information provided by [Node JS](https://nodejs.org/en/):<br></br> https://nodejs.org/api/path.html

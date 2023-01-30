@@ -4,8 +4,7 @@ const path = require('path');
 const api = require('./routes/index.js'); //To be uncommented for modular routing purposes once API GET method issues have been resolved
 
 const app = express();
-// const PORT = process.env.PORT || 3001
-const PORT = 3001
+const PORT = process.env.PORT || 3001
 
 // Sets up the Express app to handle data parsing from json file
 app.use(express.json());
