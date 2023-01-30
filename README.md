@@ -17,9 +17,9 @@
   
 
   ## Credits
-  * []():<br></br> https://nodejs.org/api/path.html
+  * `path()` function information provided by [Node JS](https://nodejs.org/en/):<br></br> https://nodejs.org/api/path.html
   
-  * window.location.pathname supplemental lesson provided by [W3Schools](https://www.w3schools.com/default.asp):<br></br> https://www.w3schools.com/js/js_window_location.asp#:~:text=window.location.hostname%20returns%20the,()%20loads%20a%20new%20document
+  * `window.location.pathname` supplemental lesson provided by [W3Schools](https://www.w3schools.com/default.asp):<br></br> https://www.w3schools.com/js/js_window_location.asp#:~:text=window.location.hostname%20returns%20the,()%20loads%20a%20new%20document
   
   * What Does "(e)" Mean in JavaScript? - Event Handler Object Explained" supplemental lesson provided by [dcode](https://www.youtube.com/@dcode-software):<br></br> https://www.youtube.com/watch?v=_BVkOvpyRI0
   
@@ -29,11 +29,11 @@
   
   * RESTful APIs in 100 Seconds // Build an API from Scratch with Node.js Express supplemental lesson provided by [Fireship](https://www.youtube.com/@Fireship):<br></br> https://www.youtube.com/watch?v=-MTSQjw5DrM
   
-  * [KavinduWije](https://stackoverflow.com/users/3626371/kavinduwije):<br></br> https://stackoverflow.com/questions/39632667/how-do-i-kill-the-process-currently-using-a-port-on-localhost-in-windows
+  * Killing a localhost information provided by [KavinduWije](https://stackoverflow.com/users/3626371/kavinduwije):<br></br> https://stackoverflow.com/questions/39632667/how-do-i-kill-the-process-currently-using-a-port-on-localhost-in-windows
   
-  * []():<br></br> link
-  
-  * []():<br></br> link
+  * "How to read and write JSON file using Node.js ?" supplemental lesson provided by [Geeks for Geeks](https://www.geeksforgeeks.org/):<br></br> https://www.geeksforgeeks.org/how-to-read-and-write-json-file-using-node-js/
+
+  * `readFile()` function information provided by  [Logan](https://stackoverflow.com/users/751969/logan), [Node JS](https://nodejs.org/en/), and [hey(node)](https://heynode.com/):<br></br> https://stackoverflow.com/questions/10058814/get-data-from-fs-readfile <br></br> https://nodejs.org/api/fs.html#fs_fs_readfilesync_filename_encoding <br></br> https://heynode.com/tutorial/readwrite-json-files-nodejs/
 
   ## Questions
   
