@@ -1,12 +1,12 @@
 const notes = require('express').Router(); //allows for routes/index.js to redirect path to this file for API-based routes
-
+const savedNotes = require('../db/db.json');
 
 // API Routes - need GET /api/notes to read (GET?) db.json file and POST /api/notes to perform functions in public/assets/js/index.js
 // TODO: Create GET route to read the data on one of the notes
 
 notes.get('/', (req, res) => {
     console.info(`${req.method} request received!`);
-
+    return res.json(savedNotes);
 });
 
 // TODO: Create POST route to show the data from the note selected and display it on Notes HTML page
