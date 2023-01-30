@@ -3,17 +3,17 @@ const fs = require('fs'); //Helps to read/write/append to files
 const path = require('path'); //Used to join file path of db.json in savedNotesRoute constant
 const savedNotesRoute = path.join(__dirname, '../db/db.json');
 
-// Create GET route to read the data on one of the notes
+// Create GET route to read and show the data on one of the notes
 notes.get('/', (req, res) => {
     res.sendFile(savedNotesRoute);
 });
 
-// Create POST route to show the data from the note selected and display it on Notes HTML page
+// Create POST route to create new data from the active note and add it to rendered notes list on Notes HTML page
 notes.post('/', (req, res) => {
     // Destructuring assignment for the items in req.body
     const { title, text } = req.body;
 
-    // If all the title and text properties are present a new note is made with its contents plus a unique id
+    // If all the title and text properties are present a new note is made with its contents plus a unique id and the db.json file will be read
     if (title && text) {
         const newNote = {
             title,
@@ -29,10 +29,10 @@ notes.post('/', (req, res) => {
                 // Catching any errors first, which may occur if there is no data in the db.file
                 console.error(error);
             } else {
-                // New constant to parse note data Convert string into JSON object
+                // New constant to parse existing db.json note data, converting a JSON string into JSON object for data manipulation.
                 const parsedNote = JSON.parse(data);
 
-                // Add a new note object to the array of objects we call parsedNotes
+                // Add a new note object from line 18 to the array of objects we call parsedNotes
                 parsedNote.push(newNote);
 
                 // Updated file goes back to db.json file
@@ -61,11 +61,36 @@ notes.post('/', (req, res) => {
     }
 });
 
-// // DELETE Route to delete the data from notes - - note that line 47 of index.js has a path called `api/notes/${id}` so we will be using '/api/notes/:id'
-// notes.delete('/:id', (req, res) => {
-//     const noteID = req.params.id;
-//      console.log(noteID);
-//     //Filter out id from existing notes
-// });
+// DELETE Route to delete the data from notes - - note that line 47 of index.js has a path called `api/notes/${id}` so we will be using '/api/notes/:id'
+notes.delete('/:id', (req, res) => {
+    //When clicking on a delete trash can, it's respective id is going to be console.logged
+    const noteID = req.params.id;
+    console.log(noteID);
+    //Filter out id from existing notes
+    fs.readFile(savedNotesRoute, 'utf8', (error, data) => {
+        if (error) {
+            console.error(error);
+        } else {
+            // Parsing existing db.json note data, converting a JSON string into JSON object for data manipulation. parsedNote serves as an array of our notes.
+            const parsedNote = JSON.parse(data);
+
+            function removeNoteWithID(parsedNote, id) {
+                return parsedNote.filter((obj) => obj.id != id); //Any note that doesn't match the noteID click on gets filtered out.
+            }
+
+            const newNotesList = removeNoteWithID(parsedNote, noteID); //A new notes list with the filtered out notes is made and will be written on line 86
+
+            // Updated file goes back to db.json file
+            fs.writeFile(savedNotesRoute, JSON.stringify(newNotesList, null, 4), //convert array into string bc any JSON that is saved needs to be a string (same rules applied for local storage). null and 4 is for formatting so that its the staggered look.
+                (writeError) =>
+                    writeError
+                        ? console.error(writeError)
+                        : console.info('Successfully updated notes!')
+            );
+
+        }
+    })
+    res.sendFile(savedNotesRoute);
+});
 
 module.exports = notes;
