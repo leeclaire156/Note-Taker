@@ -2,24 +2,50 @@
   
   ## Description
 
-  This project is a note taking application that uses Express.js to save data collected from notes to a back end.
+  This project is a Heroku-deployed, note taking application that uses Express.js to save and retrieve data collected from notes stored on a JSON file. A simple note with a title and its details can be saved, where it will be added onto a list of previously created notes on the left side of the webpage. These notes can be viewed later by clicking on their titles or deleted by clicking on the red trash cans associated with them. New notes can be created with the plus (+) sign in the upper right hand corner.
 
-  ## Table of Contents
-  - [Usage](#usage)
-  - [Credits](#credits)
-  - [Questions](#questions)
+  This project exercised full-stack web development through creating the back-end of an application and connecting it to the front-end technologies that were previously built.
+
+  This application was made by using the following technologies:
+
+  * [Node version 16.18.0 64-bit](https://nodejs.org/en/)
+  
+  * [Express version 4.16.4](https://expressjs.com/) (installed via Node Package Manager, otherwise known as `npm`)
+  
+  * [Visual Studio Code](https://code.visualstudio.com/download)
+  
+  * [GitBash](https://git-scm.com/downloads)
+  
+  * HTML
+
+  * CSS
+
+  * JS
 
   ## Usage
   
   * Please click on the following link of the deployed website, https://note-taker-lee-claire-156.herokuapp.com/
 
-  * To use this application, add a title to the note and the note's contents. Then, click on the save floppy disk icon in the upper right-hand corner, which will only appear once the note's title and text contents are filled out.
+  * The application should appear as so on screens upon load:
+
+  ![A light blue banner homepage with the title set as "Note Taker", the sub-title as "Take notes with Express", and a blue button that says "Get Started"](./assets/screenshots/Notes-Home-Page.PNG) 
+
+  * To use this application, click on the "Get Started" button on the homepage. Then, add a title to the note and add the note's contents. Afterwards, click on the floppy disk/save icon in the upper right-hand corner, which will only appear once the note's title and text contents are both filled out.
+
+  ![The note taking page with a plus sign in the top right hand corner and no title nor text in the notes section, along with a single past note in the left side that's titled "Practice" accompanied with a red trash can deletion icon](./assets/screenshots/Notes-Initial-Page.PNG)
+
+  ![The save icon in the upper-right corner appearing since the new note has now a title, named "Get Groceries" and text contents filled as "Butter, eggs, milk"](./assets/screenshots/Sample-New-Note.PNG)
 
   * To create a new note, click on the plus sign on the upper right-hand corner.
 
   * To view an old note, click on its title from the list of notes on the left side of the page.
 
-  * To delete a note, click on the red trash can to the right of the note's title.  
+  ![A previously saved note called "Practice" being viewed, containing the following text: "Must practice violin 20 minutes a day"](./assets/screenshots/Sample-New-Note.PNG)
+
+  * To delete a note, click on the red trash can to the right of the note's title.
+  
+  ![The list only containing the "Get Groceries" note that was saved, because the "Practice" note was deleted](./assets/screenshots/Sample-Deleted-Note.PNG)
+  
 
   ## Credits
   * `path()` function information provided by [Node JS](https://nodejs.org/en/):<br></br> https://nodejs.org/api/path.html
