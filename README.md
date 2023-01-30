@@ -35,6 +35,8 @@
 
   * `readFile()` function information provided by  [Logan](https://stackoverflow.com/users/751969/logan), [Node JS](https://nodejs.org/en/), and [hey(node)](https://heynode.com/):<br></br> https://stackoverflow.com/questions/10058814/get-data-from-fs-readfile <br></br> https://nodejs.org/api/fs.html#fs_fs_readfilesync_filename_encoding <br></br> https://heynode.com/tutorial/readwrite-json-files-nodejs/
 
+  * Using `Array filter()` method to remove an element from an array by ID credit goes to [Coding Beauty](https://codingbeautydev.com/):<br></br> https://codingbeautydev.com/blog/javascript-remove-element-from-array-by-id/#:~:text=splice()%20methods-,To%20remove%20an%20element%20from%20an%20array%20by%20ID%20in,)%20%7B%20const%20objWithIdIndex%20%3D%20arr.
+
   ## Questions
   
   If you have any questions, my GitHub profile is [www.github.com/leeclaire156](www.github.com/leeclaire156), and my email is [lee.claire156@gmail.com](mailto:lee.claire156@gmail.com).
